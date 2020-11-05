@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "GoalList"
+    }
+  },
+  "defaultProject": "GoalList",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -1,11 +1,20 @@
-<p>goal works!</p>
-<div class='card'>
-    <ul>
+<!-- <p>goal works!</p> -->
+<div>
+  <h1 class="text-center">My goals</h1>
+</div>
+<hr>
+<div class='row'>
+  <div  class="col-md-6" >
+    <ul class="heroes">
       <li *ngFor='let goal of goals; let i = index'>
         <p>{{goal.name}}</p>
-        <button (click)='toggleDetails(i)'>Toggle Details</button>
+        <button class="btn btn-success" (click)='toggleDetails(i)'>Toggle Details</button>
         <!-- <app-goal-detail *ngIf='goal.showDescription' [goal]='goal' ></app-goal-detail> -->
-        <app-goal-detail *ngIf='goal.showDescription' [goal]='goal' (isComplete) = 'completeGoal($event,i)'></app-goal-detail>
+        <app-goal-detail *ngIf='goal.showDescription' [goal]='goal' (isComplete) = 'deleteGoal($event,i)'></app-goal-detail>
       </li>
     </ul>
+  </div>
+  <div>
+    
+  </div>
   </div>
